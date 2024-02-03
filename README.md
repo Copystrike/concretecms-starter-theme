@@ -1,4 +1,4 @@
-# DevSpace for the ConcreteCMS Bedrock theme
+# A Development Space for the ConcreteCMS Bedrock theme
 
 ## Motivation
 
