@@ -1,5 +1,6 @@
 let mix = require('laravel-mix');
 const path = require('path');
+const WatchExternalFilesPlugin = require('webpack-watch-external-files-plugin');
 
 // Edit `themeName` and `concreteCmsPath` to your desires.
 
@@ -11,7 +12,7 @@ let themeName = "flintstone";
 let parentDirectory = path.resolve(__dirname, '..');
 let concreteCmsPath = `${parentDirectory}/cms/application/themes/${themeName}`;
 
-console.info(`Exporting ${themeName} theme to: ${parentDirectory}`);
+console.info(`Exporting ${themeName} theme to: ${concreteCmsPath}`);
 
 // Webpack configuration.
 
@@ -25,6 +26,15 @@ mix.webpackConfig({
     output: {
         path: concreteCmsPath,
     },
+    plugins: [
+        new WatchExternalFilesPlugin({
+            files: [
+                `${concreteCmsPath}**/*.{php,html}`,
+                `!${concreteCmsPath}**/css/**/*`,
+                `!${concreteCmsPath}**/js/**/*`
+            ]
+        })
+    ]
 });
 
 mix.options({

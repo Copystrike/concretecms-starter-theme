@@ -5,7 +5,15 @@ module.exports = {
   important: true,
   content: [
     // path to your concretecms theme files because we need the class names from the theme files
-    "/app/cms/application/themes/**/*.{php,html}"
+    "/app/cms/application/themes/flintstone/**/*.{php,html}"
+  ],
+  safelist: [
+    'tw-text-2xl',
+    'tw-text-3xl',
+    'tw-font-black',
+    {
+      pattern: /tw-text-(\w+)-(100|200|300|400|500|600|700|800|900)/,
+    },
   ],
   theme: {
     extend: {},
