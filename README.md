@@ -16,6 +16,7 @@ Currently in an internship that is focused on ConcreteCMS, I tasked my self to c
 
 1. Clone the repository
 1. Move everything in `themes` to the `themes` folder in your ConcreteCMS installation.
+1. Choose between the `flintstone-dev` or `flintstone-dev-tailwind` folder. Delete the one you do not want to use. for this example we will use `flintstone-dev`.
 1. Run `cd flintstone-dev`
 1. Run `npm install`
 1. Edit the `webpack.config.js` file to your needs (Explanation can be found in the file)
