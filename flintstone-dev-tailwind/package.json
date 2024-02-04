@@ -1,4 +1,10 @@
 {
+  "name": "flintstone-dev-tailwind",
+  "version": "1.0.0",
+  "keywords": [],
+  "author": "Nick Verbraecken",
+  "license": "MIT",
+  "description": "Development Environment for concretecms bedrock",
   "scripts": {
     "development": "mix",
     "watch": "mix watch",
