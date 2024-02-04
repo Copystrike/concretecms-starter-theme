@@ -1,7 +1,7 @@
 const path = require('path');
 
 // The folder name that will be used in the concretecms themes directory.
-let themeName = "flintstone";
+let themeName = "nick-theme";
 
 // The export path to the actual concretecms theme directory.
 // Default export path is: ../cms/application/themes/flintstone.
@@ -9,7 +9,7 @@ let parentDirectory = path.resolve(__dirname, '..');
 let concreteThemePath = `${parentDirectory}/cms/application/themes/${themeName}`;
 
 const assetsLoader = (mix) => {
-  const cssLocation = "assets/css/presets"
+  const cssLocation = "assets/scss/presets"
 
   // lang('<1>', '<2>')
   // 1. Path of where the development scss can be found. 
@@ -21,7 +21,7 @@ const assetsLoader = (mix) => {
 }
 
 // Exports
-exports.module = {
+module.exports = {
   parentDirectory,
   concreteThemePath,
   themeName,

@@ -1,8 +1,8 @@
-const properties = require('./properties.config');
+const properties = require('./properties.config.js');
 const WatchExternalFilesPlugin = require('webpack-watch-external-files-plugin');
 const mix = require('laravel-mix');
 
-console.info(`Exporting ${properties.themeName} theme to: ${properties.concreteCmsPath}`);
+console.info(`Exporting ${properties.themeName} theme to: ${properties.concreteThemePath}`);
 
 // Webpack configuration. 
 mix.webpackConfig({
@@ -13,14 +13,14 @@ mix.webpackConfig({
         moment: 'moment'
     },
     output: {
-        path: properties.concreteCmsPath,
+        path: properties.concreteThemePath,
     },
     plugins: [
         new WatchExternalFilesPlugin({
             files: [
-                `${properties.concreteCmsPath}**/*.{php,html}`,
-                `!${properties.concreteCmsPath}**/css/**/*`,
-                `!${properties.concreteCmsPath}**/js/**/*`
+                `${properties.concreteThemePath}**/*.{php,html}`,
+                `!${properties.concreteThemePath}**/css/**/*`,
+                `!${properties.concreteThemePath}**/js/**/*`
             ]
         })
     ]
